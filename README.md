@@ -1,11 +1,11 @@
 Extra programming excercises, from Bill
 
-1. Given a number n, print a centered diamond. It should look something like this:
-&nbsp;&nbsp;x<br>
-&nbsp;xxx<br>
+1. Given a number n, print a centered diamond. It should look something like this:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x<br>
+&nbsp;&nbsp;xxx<br>
 xxxxx<br>
-&nbsp;xxx<br>
-&nbsp;&nbsp;x<br>
+&nbsp;&nbsp;xxx<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x<br>
 
 2. Given a number n, print the sum of all of the numbers from 1 to n.
 
