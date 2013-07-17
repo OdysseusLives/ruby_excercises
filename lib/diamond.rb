@@ -17,23 +17,21 @@ class Diamond
 	end
 
 	def make_leading_shape(max_width) 
-		shape = ""
+		shape = []
 		max_width -= EDGE
 		(LEADING_START..max_width).step(EDGE) do |width|
 			shape << STAR * width 
-			shape << SEPARATOR
 		end
-		shape.chomp(SEPARATOR)
+		shape.join(SEPARATOR)
 	end
 
 	def make_trailing_shape(max_width)
-		shape = ""
+		shape = []
 		max_width -= EDGE
 		(TRAILING_START..max_width).step(EDGE) do |width|
 			shape << STAR * (max_width - width)
-			shape << SEPARATOR
 		end
-		shape.chomp(SEPARATOR)
+		shape.join(SEPARATOR)
 	end
 
 	def make_make_max_width_section(max_width)
@@ -60,11 +58,11 @@ class Diamond
 
 	def apply_padding(shape, max_width)
 		shape_lines = shape.split(SEPARATOR)
-		padded_shape = ""
+		padded_shape = []
 		shape_lines.map { |line| 
-			padded_shape << apply_padding_for_one_line(line, max_width) << SEPARATOR
+			padded_shape << apply_padding_for_one_line(line, max_width) 
 		}
-		padded_shape.chomp(SEPARATOR)
+		padded_shape.join(SEPARATOR)
 	end
 
 	def run(number)
