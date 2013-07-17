@@ -114,7 +114,6 @@ describe Diamond do
 		end
 	end
 
-
 	describe "#apply_padding" do 
 		it "applies padding to excecuted diamond shape of max_width 3" do 
 			shape = @diamond.excecute(3)
