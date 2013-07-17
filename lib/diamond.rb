@@ -4,6 +4,7 @@ class Diamond
 	LEADING_START = 1
 	TRAILING_START = 0
 	STAR = "*"
+	SPACE = " "
 
 	def make_numbers_odd(number)
 		number = number.round
@@ -39,6 +40,16 @@ class Diamond
 		STAR * max_width
 	end
 
+	def how_much_whitespace_padding?(input, max_width)
+		max_possible_padding = (max_width - 1) / 2
+		max_possible_padding - (input.length - 1) / 2
+	end
+
+	def apply_padding_for_one_line(input, max_width)
+		padding = how_much_whitespace_padding?(input, max_width)
+		SPACE * padding + input
+	end 
+
 	def excecute(max_width)
 		shape = ""
 		shape << make_leading_shape(max_width) << SEPARATOR if max_width > 1
@@ -47,8 +58,18 @@ class Diamond
 		shape 
 	end
 
+	def apply_padding(shape, max_width)
+		shape_lines = shape.split(SEPARATOR)
+		padded_shape = ""
+		shape_lines.map { |line| 
+			padded_shape << apply_padding_for_one_line(line, max_width) << SEPARATOR
+		}
+		padded_shape.chomp(SEPARATOR)
+	end
+
 	def run(number)
 		max_width = set_up(number)
-		excecute(max_width)
+		shape = excecute(max_width)
+		apply_padding(shape, max_width)
 	end
 end
