@@ -48,4 +48,13 @@ describe NumberFunctions do
 			@number_functions.define_pi(999).round(2).should eq(3.14)
 		end 
 	end
+
+	describe "#give_me_odd_integers" do 
+		it "takes an array [0, 1] and returns 1" do 
+			@number_functions.give_me_odd_integers([0, 1]).should eq("1")
+		end
+		it "takes an array [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] and returns '1, 3, 5, 7, 9'" do 
+			@number_functions.give_me_odd_integers([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]).should eq("1, 3, 5, 7, 9")
+		end
+	end
 end

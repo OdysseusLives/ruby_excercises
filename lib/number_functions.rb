@@ -27,4 +27,12 @@ class NumberFunctions
 		frac = pi_fractions(max_number)
 		4 * (1 + frac)
 	end
+
+	def give_me_odd_integers(integers)
+		numbers = []
+		integers.map { |num| 
+			numbers << num if num % 2 == 1 
+		}
+		numbers.join(", ")
+	end
 end

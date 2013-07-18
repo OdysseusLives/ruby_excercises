@@ -10,4 +10,8 @@ puts "Sum of 1 to 100: " << number_functions.sum(100).to_s << "\n"
 puts "Average of 1 to 100: " << number_functions.average(100).to_s << "\n\n"
 
 puts "Pi determined with 3 as largest denominator in formula: " << number_functions.define_pi(3).round(4).to_s << "\n"
-puts "Pi determined with 99 as largest denominator in formula: " << number_functions.define_pi(99).round(4).to_s << "\n"
+puts "Pi determined with 99 as largest denominator in formula: " << number_functions.define_pi(99).round(4).to_s << "\n\n"
+
+numbers = [0, 1, 10, 11, 12, 13, 5, 6, 7, 39]
+puts "Odd integers in '" + numbers.to_s + "': " << number_functions.give_me_odd_integers(numbers).to_s << "\n\n"
+
