@@ -1,5 +1,6 @@
 class NumberFunctions
 	COMMA_SPACE = ", "
+	SPACE = " "
 	def sum(max_number)
 		sum = 0
 		for counter in 0..max_number 
@@ -46,5 +47,16 @@ class NumberFunctions
 			sum += odd_num.to_i	
 		}
 		sum
+	end
+
+	def product(*multipliers)
+		if multipliers.first.class == String then
+			multipliers = multipliers.first.split(SPACE)
+		end
+		product = 1
+		multipliers.each { |num|
+			product *= num.to_i
+		}
+		product
 	end
 end

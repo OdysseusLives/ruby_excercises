@@ -78,7 +78,18 @@ describe NumberFunctions do
 		end
 	end
 
-	describe "#give_me_even_integers" do 
-
+	describe "#product" do 
+		it "takes 1 and 1 and returns 1" do 
+			@number_functions.product(1, 1).should eq(1)
+		end
+		it "takes 2 and 3 and returns 6" do
+			@number_functions.product(2, 3).should eq(6)
+		end
+		it "takes more than two arguments" do
+			@number_functions.product(1, 2, 3, 4, 5).should eq(120)
+		end
+		it "takes a string of numbers" do 
+			@number_functions.product("1, 2, 3, 4, 5").should eq(120)
+		end
 	end
 end
