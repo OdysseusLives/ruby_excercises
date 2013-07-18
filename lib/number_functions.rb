@@ -1,4 +1,5 @@
 class NumberFunctions
+	COMMA_SPACE = ", "
 	def sum(max_number)
 		sum = 0
 		for counter in 0..max_number 
@@ -33,6 +34,16 @@ class NumberFunctions
 		integers.map { |num| 
 			numbers << num if num % 2 == 1 
 		}
-		numbers.join(", ")
+		numbers.join(COMMA_SPACE)
+	end
+
+	def sum_of_odd_integers(integers)
+		odd = give_me_odd_integers(integers)
+		odds = odd.split(COMMA_SPACE)
+		sum = 0
+		odds.each { |odd_num|
+			sum += odd_num.to_i	
+		}
+		sum
 	end
 end
