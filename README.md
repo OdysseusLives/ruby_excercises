@@ -25,4 +25,4 @@ To run tests: rspec
 To run each excercise: 
   1. ruby bin/diamond
   2. ruby bin/number_functions
-  3. <This is run with #2>
+  3. This is run with #2

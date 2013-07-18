@@ -24,4 +24,28 @@ describe NumberFunctions do
 			@number_functions.average(2).should eq(1.5)
 		end
 	end
+
+	describe "#pi_fractions" do 
+		it "subtracts 1/3 when given 3" do
+			@number_functions.pi_fractions(3).round(2).should eq((-0.33))
+		end
+		it "subtracts 1/3 and adds 1/5 when given 5" do
+			@number_functions.pi_fractions(5).round(2).should eq((-0.33 + 0.20))
+		end
+		it "adds 1/3 to 1/99 when given 99" do
+			@number_functions.pi_fractions(99).round(2).should eq((-0.22))
+		end
+	end
+
+	describe "#define_pi" do 
+		it "determines pi using a formula with denominator of 3 as the most accurate" do 
+			@number_functions.define_pi(3).round(2).should eq(2.67)
+		end 
+		it "determines pi using a formula with denominator of 5 as the most accurate" do 
+			@number_functions.define_pi(5).round(2).should eq(3.47)
+		end 
+		it "gives a number close to pi" do 
+			@number_functions.define_pi(999).round(2).should eq(3.14)
+		end 
+	end
 end
