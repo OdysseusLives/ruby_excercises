@@ -12,7 +12,7 @@ puts "Pi determined with 3 as largest denominator in formula: " << number_functi
 puts "Pi determined with 99 as largest denominator in formula: " << number_functions.define_pi(99).round(4).to_s << "\n\n"
 
 numbers = [0, 1, 10, 11, 12, 13, 5, 6, 7, 39]
-odds = number_functions.give_me_odd_integers(numbers)
+odds = number_functions.give_me_integers_where_boolean_evenly_divisible_by_2(numbers)
 puts "Odd integers in '" + numbers.to_s + "': " << odds.to_s << "\n\n"
 puts "Sum of these odd integers '" + odds.to_s + "': " << number_functions.sum_of_odd_integers(numbers).to_s << "\n\n"
 

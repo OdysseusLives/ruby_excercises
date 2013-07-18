@@ -49,12 +49,23 @@ describe NumberFunctions do
 		end 
 	end
 
-	describe "#give_me_odd_integers" do 
-		it "takes an array [0, 1] and returns 1" do 
-			@number_functions.give_me_odd_integers([0, 1]).should eq("1")
+	describe "#give_me_integers_where_boolean_evenly_divisible_by_2" do 
+		before :each do 
+			@small_array = [0, 1]
+			@large_array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 		end
-		it "takes an array [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] and returns '1, 3, 5, 7, 9'" do 
-			@number_functions.give_me_odd_integers([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]).should eq("1, 3, 5, 7, 9")
+
+		it "takes an array [0, 1] and returns odd: 1" do 
+			@number_functions.give_me_integers_where_boolean_evenly_divisible_by_2(@small_array, false).should eq("1")
+		end
+		it "takes an array [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] and returns odd: '1, 3, 5, 7, 9'" do 
+			@number_functions.give_me_integers_where_boolean_evenly_divisible_by_2(@large_array, false).should eq("1, 3, 5, 7, 9")
+		end
+		it "takes an array [0, 1] and returns even: 0" do 
+			@number_functions.give_me_integers_where_boolean_evenly_divisible_by_2(@small_array, true).should eq("0")
+		end
+		it "takes an array [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] and returns even: '2, 4, 6, 8'" do 
+			@number_functions.give_me_integers_where_boolean_evenly_divisible_by_2(@large_array, true).should eq("0, 2, 4, 6, 8")
 		end
 	end
 
@@ -65,5 +76,9 @@ describe NumberFunctions do
 		it "takes array of [1, 2, 3, 4, 5, 6, 7, 8, 9] and gets 25" do 
 			@number_functions.sum_of_odd_integers([1, 2, 3, 4, 5, 6, 7, 8, 9]).should eq(25)
 		end
+	end
+
+	describe "#give_me_even_integers" do 
+
 	end
 end
