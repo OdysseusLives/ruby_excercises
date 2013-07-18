@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require_relative '../lib/number_functions.rb'
+
+number_functions = NumberFunctions.new()
+puts "Sum of 1 to 25: " << number_functions.sum(25).to_s << "\n"
+puts "Average of 1 to 25: " << number_functions.average(25).to_s << "\n\n"
+
+
+puts "Sum of 1 to 100: " << number_functions.sum(100).to_s << "\n"
+puts "Average of 1 to 100: " << number_functions.average(100).to_s << "\n\n"

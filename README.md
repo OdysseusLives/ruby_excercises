@@ -11,7 +11,7 @@ xxxxx<br>
 
 3. Given a number n, print the average of all of the numbers from 1 to n.
 
-4. Compute an approximation of pi using this formula:
+4. Compute an approximation of pi using this formula: (see ExerciseBasics_ComputePI.png)
 
 5. Given an array of Integers, print out all of the odd ones.
 
@@ -24,4 +24,5 @@ To run tests: rspec
 
 To run each excercise: 
   1. ruby bin/diamond
-  2. 
+  2. ruby bin/number_functions
+  3. <This is run with #2>

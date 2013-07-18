@@ -5,6 +5,5 @@ diamond = Diamond.new()
 puts diamond.run(3)
 puts "\n\n"
 puts diamond.run(7)
-
 puts "\n\n"
 puts diamond.run(15)
